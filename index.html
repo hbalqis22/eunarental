@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Euna Rental — Premium Outdoor Equipment</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+<!-- ══════════════════════════════════════
+     LANDING PAGE
+══════════════════════════════════════ -->
+<div id="page-landing" class="page active">
+
+  <!-- Animated background -->
+  <div class="landing-bg">
+    <div class="bg-shapes">
+      <div class="shape s1"></div>
+      <div class="shape s2"></div>
+      <div class="shape s3"></div>
+      <div class="shape s4"></div>
+    </div>
+    <div class="bg-grid"></div>
+  </div>
+
+  <!-- Landing Navbar -->
+  <nav class="landing-nav">
+    <div class="logo-wrap">
+      <i class="fas fa-mountain logo-icon"></i>
+      <span class="logo-text">EUNA <em>RENTAL</em></span>
+    </div>
+    <div class="landing-nav-right">
+      <button class="theme-btn" onclick="toggleTheme()" title="Ganti Tema">
+        <i class="fas fa-moon" id="theme-icon"></i>
+      </button>
+      <button class="btn-outline-sm" onclick="showPage('login')">Masuk</button>
+      <button class="btn-solid-sm" onclick="showPage('register')">Daftar</button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-left">
+      <div class="hero-tag">
+        <span class="pulse-dot"></span>
+        Premium Outdoor Equipment Rental
+      </div>
+      <h1 class="hero-title">
+        Jelajahi Alam<br>
+        <span class="gradient-text">Tanpa Batas</span>
+      </h1>
+      <p class="hero-desc">
+        Sewa perlengkapan outdoor berkualitas premium. Tenda, carrier, sleeping bag, dan ratusan peralatan lainnya untuk petualangan terbaik Anda.
+      </p>
+      <div class="hero-btns">
+        <button class="btn-hero-primary" onclick="showPage('register')">
+          Mulai Sekarang <i class="fas fa-arrow-right"></i>
+        </button>
+        <button class="btn-hero-ghost" onclick="showPage('login')">
+          <i class="fas fa-sign-in-alt"></i> Sudah Punya Akun
+        </button>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat"><span class="hstat-n">200+</span><span class="hstat-l">Koleksi Alat</span></div>
+        <div class="hstat-div"></div>
+        <div class="hstat"><span class="hstat-n">500+</span><span class="hstat-l">Pelanggan</span></div>
+        <div class="hstat-div"></div>
+        <div class="hstat"><span class="hstat-n">4.9★</span><span class="hstat-l">Rating</span></div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-card-main">
+        <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=700&q=80" alt="Camping"/>
+        <div class="card-badge-bottom"><i class="fas fa-campground"></i> Premium Camping Gear</div>
+      </div>
+      <div class="hero-card-sm card-sm-1">
+        <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=300&q=80" alt="Hiking"/>
+        <span><i class="fas fa-hiking"></i> Hiking Gear</span>
+      </div>
+      <div class="hero-card-sm card-sm-2">
+        <img src="https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=300&q=80" alt="Adventure"/>
+        <span><i class="fas fa-mountain"></i> Adventure Kit</span>
+      </div>
+      <div class="float-pill pill-1"><i class="fas fa-shield-alt"></i> Kualitas Terjamin</div>
+      <div class="float-pill pill-2"><i class="fas fa-clock"></i> Sewa Fleksibel</div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="feat-section">
+    <div class="sec-tag">Mengapa Euna Rental?</div>
+    <h2 class="sec-title">Pengalaman Rental <span>Terbaik</span></h2>
+    <div class="feat-grid">
+      <div class="feat-card">
+        <div class="feat-ico"><i class="fas fa-gem"></i></div>
+        <h3>Kualitas Premium</h3>
+        <p>Semua peralatan terawat sempurna dari merek ternama dunia</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-ico"><i class="fas fa-tags"></i></div>
+        <h3>Harga Terjangkau</h3>
+        <p>Nikmati petualangan premium dengan harga sewa bersahabat</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-ico"><i class="fas fa-bolt"></i></div>
+        <h3>Booking Cepat</h3>
+        <p>Proses pemesanan mudah, konfirmasi instan dalam hitungan menit</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-ico"><i class="fas fa-headset"></i></div>
+        <h3>Support 24/7</h3>
+        <p>Tim siap membantu Anda kapan saja via WhatsApp</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Preview -->
+  <section class="cat-section">
+    <div class="sec-tag">Koleksi Kami</div>
+    <h2 class="sec-title">Kategori <span>Perlengkapan</span></h2>
+    <div class="cat-preview-grid">
+      <div class="cat-prev-card" onclick="showPage('login')">
+        <img src="https://down-id.img.susercontent.com/file/sg-11134201-7rbl3-llsofy0a6ss98a" alt="Tenda" loading="lazy"/>
+        <div class="cat-prev-overlay"><i class="fas fa-campground"></i><span>Tenda</span></div>
+      </div>
+      <div class="cat-prev-card" onclick="showPage('login')">
+        <img src="https://lzd-img-global.slatic.net/g/p/1ab9f4509f7e4740cb98aa9eaa682db3.jpg_720x720q80.jpg" alt="Carrier" loading="lazy"/>
+        <div class="cat-prev-overlay"><i class="fas fa-backpack"></i><span>Carrier & Tas</span></div>
+      </div>
+      <div class="cat-prev-card" onclick="showPage('login')">
+        <img src="https://contents.mediadecathlon.com/m16914092/k$af402bd7bec7c8a17249905b9f57080f/enjoy-short-2024-mummy-sleeping-bag-25c-200-cm-blue-with-orange-adults.jpg" alt="Sleeping Bag" loading="lazy"/>
+        <div class="cat-prev-overlay"><i class="fas fa-bed"></i><span>Sleeping Bag</span></div>
+      </div>
+      <div class="cat-prev-card" onclick="showPage('login')">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.0YE0hc05cqqYEd79i2LmkwHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Masak" loading="lazy"/>
+        <div class="cat-prev-overlay"><i class="fas fa-fire"></i><span>Peralatan Masak</span></div>
+      </div>
+      <div class="cat-prev-card" onclick="showPage('login')">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.LMJQ8d6HoVTzUjZx3Lme9QHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Navigasi" loading="lazy"/>
+        <div class="cat-prev-overlay"><i class="fas fa-compass"></i><span>Navigasi & Safety</span></div>
+      </div>
+      <div class="cat-prev-card" onclick="showPage('login')">
+        <img src="https://down-id.img.susercontent.com/file/sg-11134201-7rd3n-lurko8ehcf0m46" alt="Pakaian" loading="lazy"/>
+        <div class="cat-prev-overlay"><i class="fas fa-tshirt"></i><span>Pakaian Outdoor</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-inner">
+      <h2>Siap Memulai Petualangan?</h2>
+      <p>Daftar gratis dan akses ratusan perlengkapan outdoor premium</p>
+      <div class="cta-btns">
+        <button class="btn-hero-primary" onclick="showPage('register')">Daftar Gratis <i class="fas fa-user-plus"></i></button>
+        <button class="btn-hero-ghost" onclick="showPage('login')">Sudah Punya Akun</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="landing-footer">
+    <div class="footer-logo"><i class="fas fa-mountain"></i> EUNA RENTAL</div>
+    <p>© 2026 Euna Rental. Berdiri sejak 22 Maret 2026. Bandung, Indonesia.</p>
+  </footer>
+</div>
+
+<!-- ══════════════════════════════════════
+     LOGIN PAGE
+══════════════════════════════════════ -->
+<div id="page-login" class="page">
+  <div class="auth-wrap">
+    <div class="auth-side-visual">
+      <div class="auth-visual-overlay"></div>
+      <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800&q=80" alt="outdoor" class="auth-bg-img"/>
+      <div class="auth-visual-text">
+        <div class="logo-wrap white">
+          <i class="fas fa-mountain logo-icon"></i>
+          <span class="logo-text">EUNA <em>RENTAL</em></span>
+        </div>
+        <h2>Selamat Datang Kembali</h2>
+        <p>Masuk untuk menjelajahi koleksi perlengkapan outdoor premium</p>
+      </div>
+    </div>
+    <div class="auth-form-side">
+      <button class="back-btn" onclick="showPage('landing')"><i class="fas fa-arrow-left"></i> Kembali</button>
+      <div class="auth-form-box">
+        <h2>Masuk</h2>
+        <p class="auth-sub">Belum punya akun? <a href="#" onclick="showPage('register')">Daftar sekarang</a></p>
+        <form id="login-form" onsubmit="handleLogin(event)">
+          <div class="fg">
+            <label><i class="fas fa-envelope"></i> Email</label>
+            <input type="email" id="login-email" placeholder="nama@email.com" required />
+          </div>
+          <div class="fg">
+            <label><i class="fas fa-lock"></i> Password</label>
+            <div class="inp-eye">
+              <input type="password" id="login-password" placeholder="Masukkan password" required />
+              <button type="button" onclick="togglePass('login-password',this)"><i class="fas fa-eye"></i></button>
+            </div>
+          </div>
+          <div id="login-error" class="err-msg" style="display:none"></div>
+          <button type="submit" class="btn-auth-submit">Masuk <i class="fas fa-sign-in-alt"></i></button>
+        </form>
+        <button class="theme-toggle-small" onclick="toggleTheme()"><i class="fas fa-adjust"></i> Ganti Tema</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     REGISTER PAGE
+══════════════════════════════════════ -->
+<div id="page-register" class="page">
+  <div class="auth-wrap">
+    <div class="auth-side-visual">
+      <div class="auth-visual-overlay"></div>
+      <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=800&q=80" alt="outdoor" class="auth-bg-img"/>
+      <div class="auth-visual-text">
+        <div class="logo-wrap white">
+          <i class="fas fa-mountain logo-icon"></i>
+          <span class="logo-text">EUNA <em>RENTAL</em></span>
+        </div>
+        <h2>Bergabung Bersama Kami</h2>
+        <p>Daftar gratis dan mulai petualangan outdoor impianmu</p>
+      </div>
+    </div>
+    <div class="auth-form-side">
+      <button class="back-btn" onclick="showPage('landing')"><i class="fas fa-arrow-left"></i> Kembali</button>
+      <div class="auth-form-box">
+        <h2>Buat Akun</h2>
+        <p class="auth-sub">Sudah punya akun? <a href="#" onclick="showPage('login')">Masuk di sini</a></p>
+        <form id="register-form" onsubmit="handleRegister(event)">
+          <div class="fg">
+            <label><i class="fas fa-user"></i> Nama Lengkap</label>
+            <input type="text" id="reg-name" placeholder="Nama lengkap Anda" required />
+          </div>
+          <div class="fg">
+            <label><i class="fas fa-envelope"></i> Email</label>
+            <input type="email" id="reg-email" placeholder="nama@email.com" required />
+          </div>
+          <div class="fg">
+            <label><i class="fas fa-phone"></i> No. Telepon</label>
+            <input type="tel" id="reg-phone" placeholder="08xxxxxxxxxx" required />
+          </div>
+          <div class="fg">
+            <label><i class="fas fa-lock"></i> Password</label>
+            <div class="inp-eye">
+              <input type="password" id="reg-password" placeholder="Minimal 6 karakter" required minlength="6" />
+              <button type="button" onclick="togglePass('reg-password',this)"><i class="fas fa-eye"></i></button>
+            </div>
+          </div>
+          <div id="register-error" class="err-msg" style="display:none"></div>
+          <div id="register-success" class="suc-msg" style="display:none"></div>
+          <button type="submit" class="btn-auth-submit">Daftar Sekarang <i class="fas fa-user-plus"></i></button>
+        </form>
+        <button class="theme-toggle-small" onclick="toggleTheme()"><i class="fas fa-adjust"></i> Ganti Tema</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     MAIN APP
+══════════════════════════════════════ -->
+<div id="page-app" class="page">
+
+  <!-- Navbar -->
+  <nav class="main-nav" id="main-nav">
+    <div class="nav-logo" onclick="showApp('beranda')">
+      <i class="fas fa-mountain"></i>
+      <span>EUNA <strong>RENTAL</strong></span>
+    </div>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a class="nav-a" data-p="beranda" onclick="showApp('beranda')"><i class="fas fa-home"></i><span>Beranda</span></a></li>
+      <li><a class="nav-a" data-p="pricelist" onclick="showApp('pricelist')"><i class="fas fa-tags"></i><span>Pricelist</span></a></li>
+      <li><a class="nav-a" data-p="booking" onclick="showApp('booking')"><i class="fas fa-calendar-check"></i><span>Booking</span></a></li>
+      <li><a class="nav-a" data-p="tentang" onclick="showApp('tentang')"><i class="fas fa-info-circle"></i><span>Tentang Kami</span></a></li>
+    </ul>
+    <div class="nav-right-tools">
+      <button class="theme-btn" onclick="toggleTheme()"><i class="fas fa-moon" id="theme-icon-2"></i></button>
+      <div class="user-pill" id="user-pill" onclick="toggleUserDrop()">
+        <div class="u-avatar" id="u-avatar">A</div>
+        <span id="u-name">User</span>
+        <i class="fas fa-chevron-down u-chev"></i>
+      </div>
+      <div class="u-dropdown" id="u-dropdown">
+        <div class="u-drop-head">
+          <div class="u-drop-avatar" id="u-drop-avatar">A</div>
+          <div>
+            <div class="u-drop-name" id="u-drop-name">User</div>
+            <div class="u-drop-email" id="u-drop-email">-</div>
+          </div>
+        </div>
+        <div class="u-drop-div"></div>
+        <a class="u-drop-item" onclick="showApp('profil')"><i class="fas fa-user-circle"></i> Profil Saya</a>
+        <a class="u-drop-item" onclick="showApp('riwayat')"><i class="fas fa-history"></i> Riwayat Rental</a>
+        <div class="u-drop-div"></div>
+        <a class="u-drop-item u-drop-danger" onclick="handleLogout()"><i class="fas fa-sign-out-alt"></i> Keluar</a>
+      </div>
+      <button class="hamburger-btn" id="hamburger" onclick="toggleMobileNav()"><i class="fas fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <!-- App Pages -->
+  <div class="app-body">
+
+    <!-- ─── BERANDA ─── -->
+    <div id="ap-beranda" class="ap active">
+      <div class="app-banner">
+        <div class="app-banner-text">
+          <h1>Selamat Datang, <span id="banner-name">Petualang</span>!</h1>
+          <p>Temukan perlengkapan outdoor terbaik untuk petualanganmu</p>
+        </div>
+        <div class="app-search-wrap">
+          <i class="fas fa-search"></i>
+          <input type="text" id="search-inp" placeholder="Cari perlengkapan..." oninput="renderProducts()" />
+        </div>
+      </div>
+
+      <div class="cat-filter-wrap">
+        <button class="cf-btn active" data-cat="semua" onclick="setCat('semua',this)"><i class="fas fa-border-all"></i> Semua</button>
+        <button class="cf-btn" data-cat="tenda" onclick="setCat('tenda',this)"><i class="fas fa-campground"></i> Tenda</button>
+        <button class="cf-btn" data-cat="carrier" onclick="setCat('carrier',this)"><i class="fas fa-backpack"></i> Carrier & Tas</button>
+        <button class="cf-btn" data-cat="sleeping" onclick="setCat('sleeping',this)"><i class="fas fa-bed"></i> Sleeping Bag</button>
+        <button class="cf-btn" data-cat="masak" onclick="setCat('masak',this)"><i class="fas fa-fire"></i> Peralatan Masak</button>
+        <button class="cf-btn" data-cat="navigasi" onclick="setCat('navigasi',this)"><i class="fas fa-compass"></i> Navigasi & Safety</button>
+        <button class="cf-btn" data-cat="pakaian" onclick="setCat('pakaian',this)"><i class="fas fa-tshirt"></i> Pakaian Outdoor</button>
+      </div>
+
+      <div class="products-grid" id="products-grid"></div>
+    </div>
+
+    <!-- ─── PRICELIST ─── -->
+    <div id="ap-pricelist" class="ap">
+      <div class="page-hdr">
+        <h1><i class="fas fa-tags"></i> Daftar Harga</h1>
+        <p>Harga sewa perlengkapan outdoor, tersusun A–Z per kategori</p>
+      </div>
+      <div id="pricelist-wrap"></div>
+    </div>
+
+    <!-- ─── BOOKING ─── -->
+    <div id="ap-booking" class="ap">
+      <div class="page-hdr">
+        <h1><i class="fas fa-calendar-check"></i> Booking Perlengkapan</h1>
+        <p>Isi formulir berikut untuk memesan perlengkapan outdoor Anda</p>
+      </div>
+      <div class="booking-wrap">
+
+        <!-- Rules -->
+        <div class="rules-box">
+          <div class="rules-title"><i class="fas fa-clipboard-list"></i> Peraturan Rental</div>
+          <ul class="rules-ul">
+            <li><i class="fas fa-check-circle"></i> Wajib menunjukkan KTP/identitas valid saat pengambilan</li>
+            <li><i class="fas fa-check-circle"></i> Jaminan berupa KTP asli atau uang tunai senilai barang</li>
+            <li><i class="fas fa-check-circle"></i> Keterlambatan pengembalian: denda <strong>Rp 25.000/hari/item</strong></li>
+            <li><i class="fas fa-check-circle"></i> Kerusakan ditanggung penyewa sesuai estimasi perbaikan</li>
+            <li><i class="fas fa-check-circle"></i> Kehilangan barang: penggantian <strong>100% harga pasaran</strong></li>
+            <li><i class="fas fa-check-circle"></i> Pembatalan ≤ 24 jam sebelum sewa: biaya <strong>50%</strong></li>
+            <li><i class="fas fa-check-circle"></i> Barang diperiksa bersama saat ambil dan kembali</li>
+            <li><i class="fas fa-check-circle"></i> Dilarang meminjamkan alat kepada pihak ketiga</li>
+          </ul>
+        </div>
+
+        <form id="booking-form" onsubmit="submitBooking(event)">
+          <!-- Pemesan -->
+          <div class="book-section">
+            <div class="book-sec-title"><i class="fas fa-user"></i> Data Pemesan</div>
+            <div class="form-row-2">
+              <div class="fg"><label>Nama Lengkap</label><input type="text" id="b-name" placeholder="Nama sesuai KTP" required /></div>
+              <div class="fg"><label>No. Telepon</label><input type="tel" id="b-phone" placeholder="08xxxxxxxxxx" required /></div>
+            </div>
+          </div>
+
+          <!-- Tanggal -->
+          <div class="book-section">
+            <div class="book-sec-title"><i class="fas fa-calendar-alt"></i> Tanggal Sewa</div>
+            <div class="form-row-2">
+              <div class="fg"><label>Tanggal Mulai</label><input type="date" id="b-start" required onchange="calcBooking()" /></div>
+              <div class="fg"><label>Tanggal Selesai</label><input type="date" id="b-end" required onchange="calcBooking()" /></div>
+            </div>
+            <div class="dur-info" id="dur-info" style="display:none">
+              <i class="fas fa-clock"></i> <span id="dur-txt">0 hari</span>
+            </div>
+          </div>
+
+          <!-- Items -->
+          <div class="book-section">
+            <div class="book-sec-title"><i class="fas fa-boxes"></i> Pilih Perlengkapan</div>
+            <div id="book-items"></div>
+            <button type="button" class="btn-add-item" onclick="addBookItem()"><i class="fas fa-plus-circle"></i> Tambah Barang</button>
+          </div>
+
+          <!-- Payment -->
+          <div class="book-section">
+            <div class="book-sec-title"><i class="fas fa-credit-card"></i> Metode Pembayaran</div>
+            <div class="pay-grid">
+              <div class="pay-opt" data-m="bca" onclick="pickPay('bca',this)"><div class="pay-logo-box bca-c">BCA</div><span>BCA</span></div>
+              <div class="pay-opt" data-m="bni" onclick="pickPay('bni',this)"><div class="pay-logo-box bni-c">BNI</div><span>BNI</span></div>
+              <div class="pay-opt" data-m="bri" onclick="pickPay('bri',this)"><div class="pay-logo-box bri-c">BRI</div><span>BRI</span></div>
+              <div class="pay-opt" data-m="mandiri" onclick="pickPay('mandiri',this)"><div class="pay-logo-box mdr-c">MDR</div><span>Mandiri</span></div>
+              <div class="pay-opt" data-m="gopay" onclick="pickPay('gopay',this)"><div class="pay-logo-box gopay-c">G</div><span>GoPay</span></div>
+              <div class="pay-opt" data-m="ovo" onclick="pickPay('ovo',this)"><div class="pay-logo-box ovo-c">OVO</div><span>OVO</span></div>
+              <div class="pay-opt" data-m="dana" onclick="pickPay('dana',this)"><div class="pay-logo-box dana-c">DANA</div><span>DANA</span></div>
+              <div class="pay-opt" data-m="shopeepay" onclick="pickPay('shopeepay',this)"><div class="pay-logo-box sp-c">SP</div><span>ShopeePay</span></div>
+            </div>
+          </div>
+
+          <!-- Summary -->
+          <div class="order-summary" id="order-summary" style="display:none">
+            <div class="os-title"><i class="fas fa-receipt"></i> Ringkasan Pesanan</div>
+            <div id="os-items"></div>
+            <div class="os-total">
+              <span>Total Pembayaran</span>
+              <span id="os-total-price" class="os-price">Rp 0</span>
+            </div>
+            <button type="submit" class="btn-confirm">
+              <i class="fas fa-check-circle"></i> Konfirmasi Booking
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- ─── TENTANG KAMI ─── -->
+    <div id="ap-tentang" class="ap">
+      <div class="tentang-hero-sec">
+        <div class="tentang-hero-overlay"></div>
+        <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=1200&q=80" class="tentang-hero-bg" alt=""/>
+        <div class="tentang-hero-content">
+          <div class="about-since"><i class="fas fa-mountain"></i> Berdiri sejak 22 Maret 2026</div>
+          <h1>Tentang <span>Euna Rental</span></h1>
+          <p>Menyediakan perlengkapan outdoor berkualitas premium</p>
+        </div>
+      </div>
+
+      <div class="tentang-body">
+        <div class="about-grid">
+          <div class="about-story">
+            <h2>Cerita Kami</h2>
+            <p>Euna Rental lahir dari kecintaan mendalam terhadap alam dan petualangan. Berdiri sejak <strong>22 Maret 2026</strong>, kami hadir untuk memenuhi kebutuhan para pecinta alam yang ingin menjelajahi keindahan Indonesia tanpa harus membeli peralatan mahal.</p>
+            <p>Kami percaya bahwa alam terbuka seharusnya dapat dinikmati semua orang. Dengan menyewakan peralatan berkualitas dari merek ternama dunia, kami memastikan setiap petualangan Anda aman, nyaman, dan tak terlupakan.</p>
+            <p>Visi kami adalah menjadi mitra outdoor terpercaya di Indonesia, dengan layanan profesional dan koleksi perlengkapan yang selalu mengikuti standar internasional.</p>
+            <div class="about-vals">
+              <div class="aval"><i class="fas fa-shield-alt"></i><div><strong>Keamanan Terjamin</strong><p>Setiap alat dicek berkala</p></div></div>
+              <div class="aval"><i class="fas fa-leaf"></i><div><strong>Ramah Lingkungan</strong><p>Mendukung wisata berkelanjutan</p></div></div>
+              <div class="aval"><i class="fas fa-handshake"></i><div><strong>Layanan Terpercaya</strong><p>Ribuan pelanggan puas</p></div></div>
+            </div>
+          </div>
+          <div class="about-img-wrap">
+            <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=600&q=80" alt="Euna Rental"/>
+            <div class="about-img-stats">
+              <div><span>200+</span><small>Koleksi Alat</small></div>
+              <div><span>500+</span><small>Pelanggan</small></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-grid-wrap">
+          <h2><i class="fas fa-address-book"></i> Lokasi & Kontak</h2>
+          <div class="contact-grid">
+            <div class="cc"><div class="cc-icon loc"><i class="fas fa-map-marker-alt"></i></div><h3>Lokasi</h3><p>Jl. Petualangan Indah No. 22<br>Bandung, Jawa Barat 40000</p><p class="cc-hours"><i class="fas fa-clock"></i> Senin–Minggu: 08.00–21.00 WIB</p></div>
+            <div class="cc"><div class="cc-icon wa"><i class="fab fa-whatsapp"></i></div><h3>WhatsApp</h3><p>Hubungi untuk info & pemesanan langsung</p><a href="https://wa.me/6281234567890" target="_blank" class="cc-link wa-l"><i class="fab fa-whatsapp"></i> +62 812-3456-7890</a></div>
+            <div class="cc"><div class="cc-icon ig"><i class="fab fa-instagram"></i></div><h3>Instagram</h3><p>Update koleksi & konten outdoor inspiratif</p><a href="https://instagram.com/eunarental" target="_blank" class="cc-link ig-l"><i class="fab fa-instagram"></i> @eunarental</a></div>
+            <div class="cc"><div class="cc-icon tt"><i class="fab fa-tiktok"></i></div><h3>TikTok</h3><p>Video review alat & tips petualangan alam</p><a href="https://tiktok.com/@eunarental" target="_blank" class="cc-link tt-l"><i class="fab fa-tiktok"></i> @eunarental</a></div>
+            <div class="cc"><div class="cc-icon em"><i class="fas fa-envelope"></i></div><h3>Email</h3><p>Pertanyaan atau permintaan khusus</p><a href="mailto:eunarental@gmail.com" class="cc-link em-l"><i class="fas fa-envelope"></i> eunarental@gmail.com</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── PROFIL ─── -->
+    <div id="ap-profil" class="ap">
+      <div class="page-hdr">
+        <h1><i class="fas fa-user-circle"></i> Profil Saya</h1>
+        <p>Kelola informasi akun Anda</p>
+      </div>
+      <div class="profil-wrap">
+        <div class="profil-card">
+          <div class="profil-left">
+            <div class="profil-avatar" id="profil-av">A</div>
+            <h2 id="profil-dname">User</h2>
+            <p id="profil-demail">-</p>
+            <span class="member-tag"><i class="fas fa-star"></i> Member Aktif</span>
+          </div>
+          <div class="profil-right">
+            <h3>Informasi Akun</h3>
+            <div class="fg"><label><i class="fas fa-user"></i> Nama Lengkap</label><input type="text" id="p-name" /></div>
+            <div class="fg"><label><i class="fas fa-envelope"></i> Email</label><input type="email" id="p-email" disabled /></div>
+            <div class="fg"><label><i class="fas fa-phone"></i> No. Telepon</label><input type="tel" id="p-phone" /></div>
+            <button class="btn-save" onclick="saveProfile()"><i class="fas fa-save"></i> Simpan Perubahan</button>
+            <div id="profil-ok" class="suc-msg" style="display:none">Profil berhasil disimpan!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── RIWAYAT ─── -->
+    <div id="ap-riwayat" class="ap">
+      <div class="page-hdr">
+        <h1><i class="fas fa-history"></i> Riwayat Rental</h1>
+        <p>Semua riwayat pemesanan Anda</p>
+      </div>
+      <div class="riwayat-wrap">
+        <div class="riwayat-tabs">
+          <button class="rtab active" data-f="semua" onclick="setRiwFilter('semua',this)">Semua</button>
+          <button class="rtab" data-f="aktif" onclick="setRiwFilter('aktif',this)">Berlangsung</button>
+          <button class="rtab" data-f="selesai" onclick="setRiwFilter('selesai',this)">Selesai</button>
+        </div>
+        <div id="riwayat-list"></div>
+      </div>
+    </div>
+
+  </div><!-- end app-body -->
+</div><!-- end page-app -->
+
+<!-- ══ PRODUCT DETAIL MODAL ══ -->
+<div id="prod-modal" class="modal-bg" onclick="closeProdModal(event)">
+  <div class="modal-box" id="modal-box">
+    <button class="modal-x" onclick="closeProdModalBtn()"><i class="fas fa-times"></i></button>
+    <div id="modal-inner"></div>
+  </div>
+</div>
+
+<!-- ══ PAYMENT MODAL ══ -->
+<div id="pay-modal" class="modal-bg" onclick="closePayModal(event)">
+  <div class="modal-box pay-modal-box" id="pay-modal-box">
+    <button class="modal-x" onclick="closePayModalBtn()"><i class="fas fa-times"></i></button>
+    <div id="pay-modal-inner"></div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div id="toast" class="toast">
+  <i class="fas fa-check-circle"></i>
+  <span id="toast-msg">Berhasil!</span>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
